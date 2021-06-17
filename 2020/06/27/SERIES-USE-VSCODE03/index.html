@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="유씨의 개발 블로그 | Krystal&#39;s Dev Blog">
+    <meta name="keyword" content="javascript">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        SERIES:USE VSCODE03 - K&#39;s Dev Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Go with the flow </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>Sujeong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCODE-적응기03"><span class="toc-text">VSCODE 적응기03</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-text"># References</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">검색</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Go with the flow </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        SERIES:USE VSCODE03
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2020-06-27</span></span>
+        <!--<span class="attr">Post：<span>2020-06-27 21:29:33</span></span>-->
+        
+        <span class="attr">태그：/
+        
+        <a class="tag" href="/tags/#vscode" title="vscode">vscode</a>
+        <span>/</span>
+        
+        
+        </span>
+        <!--<span class="attr">방문：<span id="busuanzi_value_page_pv"></span>-->
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="VSCODE-적응기03"><a href="#VSCODE-적응기03" class="headerlink" title="VSCODE 적응기03"></a>VSCODE 적응기03</h2><blockquote>
+<p>Digging into Debugging</p>
+</blockquote>
+<p><a href="https://sujeongy.github.io/2020/06/26/SERIES-USE-VSCODE02">지난 번에 올렸던 글</a> 에서 참조했던 영상의 최신글을 찾았다.<br>(본인 PC에선 영상 재생이 매끄럽지 않아, 제공되는 자료로 공부했다.😅😅)</p>
+<ul>
+<li><a href="https://subicura.com/2018/02/14/javascript-debugging.html" target="_blank" rel="noopener">크롬 개발자 도구를 이용한 자바스크립트 디버깅</a></li>
+</ul>
+<blockquote>
+<p>IED(VSCode)에서 디버깅</p>
+</blockquote>
+<p>이전에도 디버깅에 대한 글을 많이 읽었는데,<br>요즘 들어서 많이 이해하고 필요성을 느꼈다.(Vue devtool 덕분인가..) console.log에 벗어나 적용시키고 있다. (일일이 찍기엔..🤢)</p>
+<blockquote>
+<p>Chrome Dev Tool에서 디버깅</p>
+</blockquote>
+<p>덤으로,</p>
+<ul>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/?hl=ko" target="_blank" rel="noopener">Chrome DevTools</a></li>
+</ul>
+<p>이 또한 예전에 봤지만, 정말 필요한 것만 쓱- 봤던거 같다.<br>다음달 페이지 최적화 작업에 많은 도움이 될 거 같아서, 더 익혀볼 예정이다.</p>
+<blockquote>
+<p>Custom</p>
+</blockquote>
+<p>VSCode에 좋은 확장프로그램이 많다.</p>
+<p>허나,</p>
+<ol>
+<li>생각보다 많은 개발자들이 default 환경 이용한다.</li>
+<li>본인의 커스텀 환경이 아닌 경우가 생긴다.(ex. 코드리뷰)</li>
+<li>확장프로그램이 많으면 스스로가 keymap 관리의 어려워진다.</li>
+</ol>
+<p>등등의 이유로 최소한만 가져가려고 한다.<br>(git, bookmark, lint, prettier 등등..)</p>
+<h3 id="References"><a href="#References" class="headerlink" title="# References"></a># References</h3><ul>
+<li><a href="https://bbol-world.tistory.com/43" target="_blank" rel="noopener">VSCode 확장프로그램 추천</a></li>
+<li><a href="https://www.youtube.com/watch?v=rHgYy7JrP1c" target="_blank" rel="noopener">김포프 - 프로그래밍의 반은 디버깅</a></li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sujeong.yoo.94">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-facebook"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/sujeongy">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>© 2020 Sujeong.</p>
+    <p>
+<!--        <span id="busuanzi_container_site_pv">-->
+<!--            <span id="busuanzi_value_site_pv"></span>PV-->
+<!--        </span>-->
+<!--        <span id="busuanzi_container_site_uv">-->
+<!--            <span id="busuanzi_value_site_uv"></span>UV-->
+<!--        </span>-->
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a>
+    </p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://krystals-dev-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

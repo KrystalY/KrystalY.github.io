@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="유씨의 개발 블로그 | Krystal&#39;s Dev Blog">
+    <meta name="keyword" content="javascript">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Simple Encryption #1 - Alternating Split - K&#39;s Dev Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Go with the flow </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>Sujeong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kata"><span class="toc-text">Kata</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#My-Solutions"><span class="toc-text"># My Solutions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Others"><span class="toc-text"># Others</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#thoughts"><span class="toc-text"># thoughts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-text">references</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">검색</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Go with the flow </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Simple Encryption #1 - Alternating Split
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2020-03-01</span></span>
+        <!--<span class="attr">Post：<span>2020-03-01 19:04:41</span></span>-->
+        
+        <span class="attr">태그：/
+        
+        <a class="tag" href="/tags/#codewars" title="codewars">codewars</a>
+        <span>/</span>
+        
+        
+        </span>
+        <!--<span class="attr">방문：<span id="busuanzi_value_page_pv"></span>-->
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="Kata"><a href="#Kata" class="headerlink" title="Kata"></a>Kata</h2><p>For building the encrypted string:<br>Take every 2nd char from the string, then the other chars, that are not every 2nd char, and concat them as new String.<br>Do this n times!</p>
+<p>Examples:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;This is a test!&quot;, 1 -&gt; &quot;hsi  etTi sats!&quot;</span><br><span class="line">&quot;This is a test!&quot;, 2 -&gt; &quot;hsi  etTi sats!&quot; -&gt; &quot;s eT ashi tist!&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Write two methods:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params">text, n</span>);</span></span><br><span class="line"><span class="function"><span class="title">function</span> <span class="title">decrypt</span>(<span class="params">encryptedText, n</span>);</span></span><br></pre></td></tr></table></figure></p>
+<p>For both methods:<br>If the input-string is null or empty return exactly this value!<br>If n is &lt;= 0 then return the input text.</p>
+<h3 id="My-Solutions"><a href="#My-Solutions" class="headerlink" title="# My Solutions"></a># My Solutions</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params">text, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n&lt;=<span class="number">0</span>) <span class="keyword">return</span> text;</span><br><span class="line">  <span class="keyword">if</span>(text==<span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> result;</span><br><span class="line">  <span class="keyword">let</span> arrEven = [], arrOdd = [];</span><br><span class="line">  <span class="keyword">let</span> textArr = text.split(<span class="string">''</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> r=<span class="number">0</span>;r&lt;textArr.length;r++) &#123;</span><br><span class="line">      (r%<span class="number">2</span>)?arrOdd.push(textArr[r]):arrEven.push(textArr[r]);</span><br><span class="line">    &#125;</span><br><span class="line">    textArr = arrOdd.join(<span class="string">''</span>)+arrEven.join(<span class="string">''</span>);</span><br><span class="line">    arrOdd = [];</span><br><span class="line">    arrEven = [];</span><br><span class="line">  &#125;</span><br><span class="line">  result = textArr;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params">encryptedText, n</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span>(n&lt;=<span class="number">0</span>) <span class="keyword">return</span> encryptedText;</span><br><span class="line"><span class="keyword">if</span>(!encryptedText.length) <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> r=<span class="number">0</span>;r&lt;n;r++) &#123;</span><br><span class="line">    <span class="keyword">let</span> len = encryptedText.length;</span><br><span class="line">    <span class="keyword">let</span> divider = (len%<span class="number">2</span>)? (len/<span class="number">2</span>)+<span class="number">1</span> : len/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">let</span> arrEven = encryptedText.slice(-divider || <span class="number">0</span>).split(<span class="string">''</span>), arrOdd = encryptedText.slice(<span class="number">0</span>, divider || <span class="number">0</span>).split(<span class="string">''</span>);</span><br><span class="line">    encryptedText = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">      <span class="keyword">let</span> val = (i%<span class="number">2</span>)? arrOdd.shift() : arrEven.shift();</span><br><span class="line">      encryptedText.push(val);</span><br><span class="line">  <span class="comment">//     result.push(val);</span></span><br><span class="line">    &#125;</span><br><span class="line">    encryptedText = encryptedText.join(<span class="string">''</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> encryptedText;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Others"><a href="#Others" class="headerlink" title="# Others"></a># Others</h3><blockquote>
+<p>정규식으로 풀이</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params">text, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    text = text &amp;&amp; text.replace(<span class="regexp">/.(.|$)/g</span>, <span class="string">'$1'</span>) + text.replace(<span class="regexp">/(.)./g</span>, <span class="string">'$1'</span>) </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> text</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params">text, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> l = text &amp;&amp; text.length / <span class="number">2</span> | <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    text = text.slice(l).replace(<span class="regexp">/./g</span>, (_, i) =&gt; _ + (i &lt; l ? text[i] : <span class="string">''</span>))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> text</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>reduce() 메소드 사용</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params">text, n=<span class="number">0</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n&lt;<span class="number">1</span> || text==<span class="literal">null</span> ? text : encrypt( [...text].reduce(<span class="function">(<span class="params">[a,b],v,i</span>)=&gt;</span> i%<span class="number">2</span> ? [a+v,b]:[a,b+v],[<span class="string">''</span>,<span class="string">''</span>]).join(<span class="string">''</span>), n<span class="number">-1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params">text, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n&lt;<span class="number">1</span> || text==<span class="literal">null</span> ? text : decrypt( [...text].slice(text.length/<span class="number">2</span>).map(<span class="function">(<span class="params">v,i</span>) =&gt;</span> v+text[i] ).join(<span class="string">''</span>).slice(<span class="number">0</span>,text.length), n<span class="number">-1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>replace() 메소드 사용</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params">text, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!text || !text.length || n &lt;= <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> res = <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">var</span> oth = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; text.length; ++i)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      oth += text[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">      res += text[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> encrypt(res + oth, --n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params">encryptedText, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!encryptedText || !encryptedText.length || n &lt;= <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> encryptedText;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> first = encryptedText.slice(<span class="number">0</span>, encryptedText.length / <span class="number">2</span>);</span><br><span class="line">  <span class="keyword">var</span> second = encryptedText.slice(encryptedText.length / <span class="number">2</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> res = <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> j = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (res.length &lt; encryptedText.length)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> (res.length % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      res += second[i];</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">      res += first[j];</span><br><span class="line">      j++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> decrypt(res, --n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="thoughts"><a href="#thoughts" class="headerlink" title="# thoughts"></a># thoughts</h3><ul>
+<li>문제 이해하는데 시간 소모가 컸다.</li>
+<li>reduce() 풀이는 복기 필요 </li>
+</ul>
+<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><ul>
+<li><a href="https://beomy.tistory.com/21" target="_blank" rel="noopener">정규식(Regular Expressions)</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="noopener">MDN - String.prototype.replace()</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noopener">MDN - Array.prototype.reduce()</a></li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sujeong.yoo.94">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-facebook"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/sujeongy">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>© 2020 Sujeong.</p>
+    <p>
+<!--        <span id="busuanzi_container_site_pv">-->
+<!--            <span id="busuanzi_value_site_pv"></span>PV-->
+<!--        </span>-->
+<!--        <span id="busuanzi_container_site_uv">-->
+<!--            <span id="busuanzi_value_site_uv"></span>UV-->
+<!--        </span>-->
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a>
+    </p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://krystals-dev-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

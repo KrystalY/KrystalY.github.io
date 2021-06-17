@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="유씨의 개발 블로그 | Krystal&#39;s Dev Blog">
+    <meta name="keyword" content="javascript">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        SERIES:USE VSCODE FIN - K&#39;s Dev Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Go with the flow </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>Sujeong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCODE-적응기-FIN"><span class="toc-text">VSCODE 적응기 FIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-command"><span class="toc-text"># Git command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#emmet"><span class="toc-text"># emmet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#toggle-tool-bar-ctrl-B"><span class="toc-text"># toggle tool bar: ctrl + B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Terminal"><span class="toc-text"># Terminal:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#단어-선택"><span class="toc-text"># 단어 선택</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#커서"><span class="toc-text"># 커서</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#레벨링-leveling-ctrl-k-ctrl-1-7"><span class="toc-text"># 레벨링(leveling): ctrl + k ctrl + 1-7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#화면"><span class="toc-text"># 화면</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#파일"><span class="toc-text"># 파일</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#하단-패널"><span class="toc-text"># 하단 패널</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#생성하기"><span class="toc-text"># 생성하기</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tab-emmet-기능"><span class="toc-text"># tab emmet 기능</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#references"><span class="toc-text"># references</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">검색</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Go with the flow </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        SERIES:USE VSCODE FIN
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2020-07-18</span></span>
+        <!--<span class="attr">Post：<span>2020-07-18 19:37:14</span></span>-->
+        
+        <span class="attr">태그：/
+        
+        <a class="tag" href="/tags/#vscode" title="vscode">vscode</a>
+        <span>/</span>
+        
+        
+        </span>
+        <!--<span class="attr">방문：<span id="busuanzi_value_page_pv"></span>-->
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="VSCODE-적응기-FIN"><a href="#VSCODE-적응기-FIN" class="headerlink" title="VSCODE 적응기 FIN"></a>VSCODE 적응기 FIN</h2><blockquote>
+<p>여전히 적응중</p>
+</blockquote>
+<p>setting sync 기능으로 환경 세팅값을 유지, 보완하고 있다. 여전히 적응 중이고, 고군분투 중이다. 😭</p>
+<p>툴 적응기동안 기존의 익숙한 것에 좀 더 생산성을 낼 수 있도록 집중해보았다.</p>
+<h2 id="Git-command"><a href="#Git-command" class="headerlink" title="# Git command"></a># Git command<br></h2><p>git cmd 사용이 익숙해졌다. commit 도 잘 쪼개서 올리고, 메세지에도 정성을 쏟고 있다…!👏 전반적으로 터미널 창과 더 친해졌고, 단순히 깃 뿐만 아니라 다른 에러나 워닝에 대해 더 꼼꼼히 읽는 습관이 생겼다.</p>
+<h2 id="emmet"><a href="#emmet" class="headerlink" title="# emmet"></a># emmet<br></h2><p>emmet 문법도 더 사용해서, 코딩 작성에 속도를 더 올리고 있다. 단순 반복 말고, 생각하면서 한줄을 써내려가고 tab을 누르는 맛이란.. 굉장한 쾌감을 준다.👍<br>(자주 쓰는 option 태그 예시를 끄적..끄적)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">option[value="$0"]&#123;$0개 보기&#125;*10</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>여전히, ctrl + K을 디폴트로 깔고 가는 단축키 때문에..  jetbrain IED Keymap의 유혹이 엄청나게 오지만… 잘 참고 지내고 있다.(커스텀하려면 벌써 했지..😅)</p>
+<p>블로그를 쓸 땐 웹스톰을 계속 쓸 예정이다. 허나, 메인은 VSCode로 이동!</p>
+<p>최근 많이 썼던 기능을 나열하면서, VSCODE 적응기는 이만 마무리..👋👋</p>
+<hr>
+<p>(W)ebstorm → (VSC)ode로 이동중</p>
+<h2 id="toggle-tool-bar-ctrl-B"><a href="#toggle-tool-bar-ctrl-B" class="headerlink" title="# toggle tool bar: ctrl + B"></a># toggle tool bar: ctrl + B</h2><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="# Terminal:"></a># Terminal:<br></h2><p>alt + t : 상태바 Terminal 오픈<br><br>ctrl + shift + `: 폴더별 터미널 선택 -&gt; 오픈<br><br>ctrl + shift + 5 : split</p>
+<h2 id="단어-선택"><a href="#단어-선택" class="headerlink" title="# 단어 선택"></a># 단어 선택<br></h2><p>같은 단어 잡기 : (W) ctrl + W / (VSC) ctrl + D<br><br>라인복사: shfit + alt + 위 아래 방향키<br><br>라인 갖고 이동: alt + 위아래 방향키</p>
+<h2 id="커서"><a href="#커서" class="headerlink" title="# 커서"></a># 커서</h2><p>탐색기 포커스(cmd + 0 / ctrl + 0)<br><br>편집기 포커스(cmd + 1/ ctrl +1)<br><br>터미널 포커스 ( ctrl + <code>`</code>)<br><br>브래드크럼브 포커스 (cmd +shift +.)</p>
+<h2 id="레벨링-leveling-ctrl-k-ctrl-1-7"><a href="#레벨링-leveling-ctrl-k-ctrl-1-7" class="headerlink" title="# 레벨링(leveling): ctrl + k ctrl + 1-7"></a># 레벨링(leveling): ctrl + k ctrl + 1-7</h2><h2 id="화면"><a href="#화면" class="headerlink" title="# 화면"></a># 화면<br></h2><p>전체 닫기<br><br>하나빼고 닫기<br><br>나누기 :  ctrl + alt + 방향키<br><br>이동하기: alt + 방향키<br><br>Focus on Open Editors view(화면으로 포커스 이동) : ctrl + K E<br><br>Focus on Breadcrumb: ctrl +alt + .<br><br>move tab ctrl + M</p>
+<h2 id="파일"><a href="#파일" class="headerlink" title="# 파일"></a># 파일<br></h2><p>File: 자동저장 Toggle Auto Save:(custom) ctrl +alt + S</p>
+<h2 id="하단-패널"><a href="#하단-패널" class="headerlink" title="# 하단 패널"></a># 하단 패널<br></h2><p>toggle : ctrl + J<br><br>size max toggle: (custom): ctrl + alt + shift + J</p>
+<h2 id="생성하기"><a href="#생성하기" class="headerlink" title="# 생성하기"></a># 생성하기<br></h2><p>(custom)new file: alt + insert<br><br>(custom)new folder: shift+ alt + insert</p>
+<h2 id="tab-emmet-기능"><a href="#tab-emmet-기능" class="headerlink" title="# tab emmet 기능"></a># tab emmet 기능</h2><p>ctrl + k ctrl + s &gt; extensions &gt; Emmet &gt; Trggier Expeansion on Tab 체크</p>
+<hr>
+<h4 id="references"><a href="#references" class="headerlink" title="# references"></a># references</h4><ul>
+<li><a href="https://blog.naver.com/PostView.nhn?blogId=ajdkfl6445&amp;logNo=221459097158&amp;parentCategoryNo=&amp;categoryNo=26&amp;viewDate=&amp;isShowPopularPosts=true&amp;from=search" target="_blank" rel="noopener">tab emmet 기능</a></li>
+<li><a href="https://hubbleconstant.tistory.com/19" target="_blank" rel="noopener">VS Code 후기 및 Bookmarks, 한글 깨짐</a></li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sujeong.yoo.94">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-facebook"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/sujeongy">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>© 2020 Sujeong.</p>
+    <p>
+<!--        <span id="busuanzi_container_site_pv">-->
+<!--            <span id="busuanzi_value_site_pv"></span>PV-->
+<!--        </span>-->
+<!--        <span id="busuanzi_container_site_uv">-->
+<!--            <span id="busuanzi_value_site_uv"></span>UV-->
+<!--        </span>-->
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a>
+    </p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://krystals-dev-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="유씨의 개발 블로그 | Krystal&#39;s Dev Blog">
+    <meta name="keyword" content="javascript">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        TIL_2020_03_12 - K&#39;s Dev Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Go with the flow </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>Sujeong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-다시보기"><span class="toc-text">JS 다시보기</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git"><span class="toc-text">git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#references"><span class="toc-text"># references</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">검색</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Go with the flow </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        TIL_2020_03_12
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2020-03-12</span></span>
+        <!--<span class="attr">Post：<span>2020-03-12 23:09:25</span></span>-->
+        
+        <span class="attr">태그：/
+        
+        <a class="tag" href="/tags/#TIL" title="TIL">TIL</a>
+        <span>/</span>
+        
+        
+        </span>
+        <!--<span class="attr">방문：<span id="busuanzi_value_page_pv"></span>-->
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h3 id="JS-다시보기"><a href="#JS-다시보기" class="headerlink" title="JS 다시보기"></a>JS 다시보기</h3><ul>
+<li>일반 함수는 this 에 바이딩할 객체가 동적으로 결정됨</li>
+<li>화살표 함수는 함수를 선언할때 this 에 바이딩할 객체가 정적으로 결정됨. 언제나 상위 스코프 this(lexical this)</li>
+<li>화살표 함수는 call, apply, bind 메소드를 사용하여 this를 변경할 수 없다.</li>
+<li>화살표 함수를 사용해서는 안되는 경우<blockquote>
+<p>메소드, prototype, 생성자 함수(화살표 함수는 prototype 프로퍼티가 없다.), addEventListener함수</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><blockquote>
+<p>브랜치 삭제하기</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d &lt;branchname&gt;</span><br><span class="line"></span><br><span class="line">// 결과 확인</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fetch vs. pull</p>
+</blockquote>
+<ul>
+<li>pull: 원격 저장소의 내용을 가져와 자동으로 병합 작업을 실행(fetch + merge)</li>
+<li>fetch: 단순히 원격 저장소의 내용을 확인만 하고 로컬 데이터와 병합은 하지 않는 경우</li>
+</ul>
+<blockquote>
+<p>깃허브 오픈 소스 기여(Contribute)</p>
+</blockquote>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> git <span class="keyword">clone</span> <span class="title">[해당 레파지토리 깃허브주소]</span></span><br><span class="line"><span class="title"></span></span><br><span class="line"><span class="title"> git</span> remote</span><br><span class="line"> <span class="comment"># origin</span></span><br><span class="line"></span><br><span class="line">git remote add upstream [해당 레파지토리 깃허브주소]</span><br><span class="line"></span><br><span class="line"> git remote</span><br><span class="line"> <span class="comment"># origin</span></span><br><span class="line"> <span class="comment"># upstream</span></span><br><span class="line"></span><br><span class="line"> git pull upstream <span class="keyword">master</span> <span class="title">// fork</span>한지 얼마 되지 않았지만 변경사항 확인차  pull</span><br><span class="line"></span><br><span class="line"> git push // 변경사항 update</span><br></pre></td></tr></table></figure>
+<p>이후 PR(pull request)</p>
+<h3 id="references"><a href="#references" class="headerlink" title="# references"></a># references</h3><ul>
+<li><a href="https://poiemaweb.com/es6-arrow-function" target="_blank" rel="noopener">화살표 함수</a></li>
+<li><a href="https://backlog.com/git-tutorial/kr/stepup/stepup3_2.html" target="_blank" rel="noopener">fetch, 원격 저장소의 데이터를 로컬에 가져오기만 하기</a></li>
+<li><a href="http://guruble.com/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%84%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%90%98%EB%8A%94-%EA%B2%83/" target="_blank" rel="noopener">오픈소스 기여를 위한 GITHUB 개념정리</a></li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sujeong.yoo.94">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-facebook"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/sujeongy">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>© 2020 Sujeong.</p>
+    <p>
+<!--        <span id="busuanzi_container_site_pv">-->
+<!--            <span id="busuanzi_value_site_pv"></span>PV-->
+<!--        </span>-->
+<!--        <span id="busuanzi_container_site_uv">-->
+<!--            <span id="busuanzi_value_site_uv"></span>UV-->
+<!--        </span>-->
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a>
+    </p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://krystals-dev-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
